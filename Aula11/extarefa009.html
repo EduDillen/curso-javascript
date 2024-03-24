@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 009 Site</title>
+    <style>
+        body{
+            background-color: rgb(36, 36, 36);
+            font: normal 20pt arial;
+            color: white;
+        }
+        input{
+            font: normal 20pt Arial;
+            width: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Insira o país: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="validar()" style="width: fit-content;">
+     <div id="res">
+
+     </div>
+     <div id="res2">
+
+     </div>
+    <script>
+        function validar() {
+            var txtp = document.querySelector('input#pais')
+            var res = document.querySelector('div#res')
+            var res2 = document.querySelector('div#res2')
+            var pais = String(txtp.value)
+            res.innerHTML = `<p> Seu pais é:<strong> ${pais} <strong>`
+            if(pais == ''){
+                res.innerHTML = ''
+                res2.innerHTML = ''
+            }
+            if(pais == 'Brasil'){
+                res2.innerHTML = 'Você é brasileiro!';
+            }
+            if(pais != 'Brasil' && pais != '') {
+                res2.innerHTML = 'Você é estrangeiro!'
+            }
+        }
+
+    </script>
+</body>
+</html>
