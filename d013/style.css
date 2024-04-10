@@ -1,0 +1,15 @@
+#notas-container {
+    display: none;
+  }
+  
+  .aprovado {
+    color: green;
+  }
+  
+  .recuperacao {
+    color: yellow;
+  }
+  
+  .reprovado {
+    color: red;
+  }
